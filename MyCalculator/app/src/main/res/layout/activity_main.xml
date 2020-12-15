@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="My Calculator"
+        style="@style/header"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Enter first number"
+        style="@style/input"
+        android:paddingBottom="40dp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/first"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Enter second number"
+        style="@style/input"
+        android:paddingBottom="40dp"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/second"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="RESULT    :"
+        style="@style/input"
+        android:paddingBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/second"
+        app:layout_constraintLeft_toRightOf="@id/txtResult"
+        android:text="0000"
+        style="@style/input"
+        android:paddingBottom="40dp"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtResult"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sub"
+        app:layout_constraintBottom_toTopOf="@id/dev"
+        android:text="+"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtResult"
+        app:layout_constraintLeft_toRightOf="@id/add"
+        app:layout_constraintRight_toLeftOf="@id/multiply"
+        app:layout_constraintBottom_toTopOf="@id/dev2"
+        android:text="-"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/sub"
+        app:layout_constraintTop_toBottomOf="@id/txtResult"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/clear"
+        android:text="*"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/dev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/add"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/dev2"
+        app:layout_constraintBottom_toTopOf="@id/exit"
+        android:text="/"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/dev2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sub"
+        app:layout_constraintLeft_toRightOf="@id/dev"
+        app:layout_constraintRight_toLeftOf="@+id/clear"
+        app:layout_constraintBottom_toTopOf="@id/exit"
+        android:text="%"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/multiply"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/dev2"
+        app:layout_constraintBottom_toTopOf="@id/exit"
+        android:text="C"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dev2"
+        app:layout_constraintVertical_bias="0.8"
+        android:text="Exit"
+        android:textSize="20dp"
+        android:backgroundTint="@color/orange"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

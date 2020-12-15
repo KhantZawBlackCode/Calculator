@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+// Header
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Calculator"
+        android:paddingBottom="30dp"
+        style="@style/name"/>
+
+    <EditText
+        android:id="@+id/txtEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:paddingBottom="20dp"
+        android:text="Enter Number"
+        android:textSize="30dp"
+        android:textColor="#7A7777"/>
+
+// First Line
+    <Button
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtEdit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/two"
+        android:text="1"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtEdit"
+        app:layout_constraintLeft_toRightOf="@id/one"
+        app:layout_constraintRight_toLeftOf="@id/three"
+        android:text="2"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtEdit"
+        app:layout_constraintLeft_toRightOf="@id/two"
+        app:layout_constraintRight_toLeftOf="@id/add"
+        android:text="3"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtEdit"
+        app:layout_constraintLeft_toRightOf="@id/three"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="+"
+        android:backgroundTint="@color/orange"
+        style="@style/button"/>
+// Second Line
+    <Button
+        android:id="@+id/four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/five"
+        android:text="4"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/two"
+        app:layout_constraintLeft_toRightOf="@id/four"
+        app:layout_constraintRight_toLeftOf="@id/six"
+        android:text="5"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/three"
+        app:layout_constraintLeft_toRightOf="@id/five"
+        app:layout_constraintRight_toLeftOf="@id/sub"
+        android:text="6"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/add"
+        app:layout_constraintLeft_toRightOf="@id/six"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="-"
+        android:backgroundTint="@color/orange"
+        style="@style/button"/>
+// Third Line
+    <Button
+        android:id="@+id/seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/four"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/eight"
+        android:text="7"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/five"
+        app:layout_constraintLeft_toRightOf="@id/seven"
+        app:layout_constraintRight_toLeftOf="@id/nine"
+        android:text="8"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/six"
+        app:layout_constraintLeft_toRightOf="@id/eight"
+        app:layout_constraintRight_toLeftOf="@id/multiply"
+        android:text="9"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sub"
+        app:layout_constraintLeft_toRightOf="@id/nine"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="*"
+        android:backgroundTint="@color/orange"
+        style="@style/button"/>
+// Fourth Line
+    <Button
+        android:id="@+id/equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/seven"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/zero"
+        android:text="="
+        android:backgroundTint="@color/orange"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/eight"
+        app:layout_constraintLeft_toRightOf="@id/equal"
+        app:layout_constraintRight_toLeftOf="@id/clear"
+        android:text="0"
+        android:backgroundTint="@color/black"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nine"
+        app:layout_constraintLeft_toRightOf="@id/zero"
+        app:layout_constraintRight_toLeftOf="@id/dev"
+        android:text="C"
+        android:backgroundTint="@color/orange"
+        style="@style/button"/>
+
+    <Button
+        android:id="@+id/dev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/multiply"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/clear"
+        android:text="/"
+        android:backgroundTint="@color/orange"
+        style="@style/button"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

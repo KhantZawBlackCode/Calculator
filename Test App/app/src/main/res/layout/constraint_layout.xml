@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/TextStyle"
+        android:text="CALCULATOR"/>
+
+<!--    First Line Number -->
+    <Button
+        android:id="@+id/One"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Head"
+        app:layout_constraintRight_toLeftOf="@id/Two"
+        style="@style/BtnStyle2"
+        android:text="1"/>
+
+    <Button
+        android:id="@+id/Two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Head"
+        app:layout_constraintLeft_toRightOf="@id/One"
+        app:layout_constraintRight_toLeftOf="@id/Three"
+        style="@style/BtnStyle2"
+        android:text="2"/>
+
+    <Button
+        android:id="@+id/Three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Head"
+        app:layout_constraintLeft_toRightOf="@id/Two"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/BtnStyle2"
+        android:text="3"/>
+
+<!--    Second Line Number -->
+    <Button
+        android:id="@+id/Four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/One"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/Five"
+        style="@style/BtnStyle2"
+        android:text="4"/>
+
+    <Button
+        android:id="@+id/Five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Two"
+        app:layout_constraintLeft_toRightOf="@id/Four"
+        app:layout_constraintRight_toLeftOf="@id/Six"
+        style="@style/BtnStyle2"
+        android:text="5"/>
+
+    <Button
+        android:id="@+id/Six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Three"
+        app:layout_constraintLeft_toRightOf="@id/Five"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/BtnStyle2"
+        android:text="6"/>
+
+<!--    Third Line Number -->
+    <Button
+        android:id="@+id/Seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Four"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/Eight"
+        style="@style/BtnStyle2"
+        android:text="7"/>
+
+    <Button
+        android:id="@+id/Eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Five"
+        app:layout_constraintLeft_toRightOf="@id/Seven"
+        app:layout_constraintRight_toLeftOf="@id/Nine"
+        style="@style/BtnStyle2"
+        android:text="8"/>
+
+    <Button
+        android:id="@+id/Nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Six"
+        app:layout_constraintLeft_toRightOf="@id/Eight"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/BtnStyle2"
+        android:text="9"/>
+
+<!--   Fourth Line Number -->
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Seven"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/Sub"
+        style="@style/BtnStyle"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/Sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Eight"
+        app:layout_constraintLeft_toRightOf="@id/Add"
+        app:layout_constraintRight_toLeftOf="@id/Multi"
+        style="@style/BtnStyle"
+        android:text="-"/>
+
+    <Button
+        android:id="@+id/Multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Nine"
+        app:layout_constraintLeft_toRightOf="@id/Sub"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/BtnStyle"
+        android:text="*"/>
+
+<!--    Fifth Line Number-->
+    <Button
+        android:id="@+id/Dev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Add"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/Dev2"
+        style="@style/BtnStyle"
+        android:text="/"/>
+
+    <Button
+        android:id="@+id/Dev2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Sub"
+        app:layout_constraintLeft_toRightOf="@id/Dev"
+        app:layout_constraintRight_toLeftOf="@id/Equal"
+        style="@style/BtnStyle"
+        android:text="%"/>
+
+    <Button
+        android:id="@+id/Equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Multi"
+        app:layout_constraintLeft_toRightOf="@id/Dev2"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/BtnStyle"
+        android:text="="/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        android:background="@drawable/btn_shape"
+        android:text="ENTER"
+        android:textSize="40dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
